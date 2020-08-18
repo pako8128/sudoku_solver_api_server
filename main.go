@@ -42,7 +42,7 @@ func main() {
 	router.HandleFunc("/api/solve", solveSudoku).Methods("POST")
 	log.Println("[+] POST /api/solve")
 
-	log.Println("Wripping with CORS defaults")
+	log.Println("Wrapping with CORS defaults")
 	handler := cors.Default().Handler(router)
 
 	port := os.Getenv("PORT")
